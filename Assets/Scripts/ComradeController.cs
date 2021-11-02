@@ -5,19 +5,25 @@ using UnityEngine;
 public class ComradeController : MonoBehaviour
 {
     [SerializeField]
-    GameObject FollowTarget;
+    private GameObject FollowTarget;
+    [SerializeField]
+    private float Speed;
+    [SerializeField]
+    private float offset;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (FollowTarget != null)
         {
-
+            Vector3 objPos = new Vector3(0, 0, -offset);
+            gameObject.transform.LookAt(FollowTarget.transform.position);
+            transform.position = Vector3.MoveTowards(objPos, objPos, Speed);
         }
     }
 
@@ -29,12 +35,15 @@ public class ComradeController : MonoBehaviour
             FollowTarget = _target;
             //Opcion 1
             InteractuableObjectController objCont = gameObject.GetComponent<InteractuableObjectController>();
-            objCont.enabled = false; //tambien se puede destruir
             SphereCollider objSphere = gameObject.GetComponent<SphereCollider>();
+            BoxCollider objColl = gameObject.GetComponent<BoxCollider>();
+           
+            
+            transform.parent = _target.transform;
             gameObject.tag = "Untagged";
-
-            // Opcion 2 
-            //crear un nuevo objeto que siga al player y destruir este
+            objCont.enabled = false; //tambien se puede destruir
+            objSphere.enabled = false;
+            objColl.enabled = false;
 
         }
         
