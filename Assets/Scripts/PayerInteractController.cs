@@ -9,10 +9,11 @@ public class PayerInteractController : MonoBehaviour
 
     private InteractuableObjectController objCont;
 
+    private QueueController queueCont;
     // Start is called before the first frame update
     void Start()
     {
-        
+        queueCont = gameObject.GetComponent<QueueController>();
     }
 
     // Update is called once per frame
@@ -51,6 +52,9 @@ public class PayerInteractController : MonoBehaviour
             }
             else 
             {
+                companions++;
+                queueCont.AddNewComrade(collision.gameObject);
+                objCont = null;
                 //hacer funcion de añadir camarada a la cola
             }
         }
