@@ -10,6 +10,8 @@ public class ComradeController : MonoBehaviour
     private float Speed;
     [SerializeField]
     private float offset;
+    [SerializeField]
+    Vector3 TargetPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,34 +19,36 @@ public class ComradeController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (FollowTarget != null)
         {
-            Vector3 objPos = new Vector3(0, 0, -offset);
+
+            Vector3 Pos = new Vector3(FollowTarget.transform.localPosition.x, FollowTarget.transform.localPosition.y , FollowTarget.transform.localPosition.z);
+            
             gameObject.transform.LookAt(FollowTarget.transform.position);
-            transform.position = Vector3.MoveTowards(objPos, objPos, Speed);
+            transform.position = Vector3.Lerp(transform.position, Pos, Speed * Time.deltaTime);
         }
     }
 
 
-    public void WhoWillFollow(GameObject _target) 
+    public void WhoWillFollow(GameObject _target, Vector3 _targetPos) 
     {
         if (_target != null)
         {
             FollowTarget = _target;
+            TargetPos = _targetPos;
             //Opcion 1
             InteractuableObjectController objCont = gameObject.GetComponent<InteractuableObjectController>();
             SphereCollider objSphere = gameObject.GetComponent<SphereCollider>();
             BoxCollider objColl = gameObject.GetComponent<BoxCollider>();
            
             
-            transform.parent = _target.transform;
             gameObject.tag = "Untagged";
             objCont.enabled = false; //tambien se puede destruir
             objSphere.enabled = false;
             objColl.enabled = false;
-
+           // gameObject.transform.parent = _target.transform;
         }
         
     }

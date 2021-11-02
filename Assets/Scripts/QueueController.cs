@@ -23,7 +23,7 @@ public class QueueController : MonoBehaviour
     {
         ComradeController comradeCont;
         comradeCont = _newComrade.GetComponent<ComradeController>();
-        comradeCont.WhoWillFollow(gameObject);
+        comradeCont.WhoWillFollow(gameObject, -Vector3.forward);
         //hacer funcion de decirle al camarada que tiene que seguir al ultimo de la cola
 
         LastInQueue = _newComrade;
