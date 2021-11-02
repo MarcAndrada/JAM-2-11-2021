@@ -6,7 +6,6 @@ public class CharacterBehaviour : MonoBehaviour {
 
     [SerializeField]
     private float moveZ;
-
     [SerializeField]
     private float moveX;
 
@@ -16,11 +15,17 @@ public class CharacterBehaviour : MonoBehaviour {
     [SerializeField]
     private Camera mainCamera;
 
+    [SerializeField]
+    private float gravity;
+    [SerializeField]
+    private float fallVelocity;
+
     public CharacterController player;
 
     private Vector3 playerInput;
 
     private Vector3 movePlayer;
+    
 
     private Vector3 camForward;
     private Vector3 camRight;
@@ -45,9 +50,13 @@ public class CharacterBehaviour : MonoBehaviour {
 
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
+        movePlayer = movePlayer * playerSpeed;
+
         player.transform.LookAt(player.transform.position + movePlayer);
 
-        player.Move(movePlayer * playerSpeed * Time.deltaTime);
+        setGravity();
+
+        player.Move(movePlayer * Time.deltaTime);
         
     }
     void camDirection()
@@ -60,5 +69,18 @@ public class CharacterBehaviour : MonoBehaviour {
 
         camForward = camForward.normalized;
         camRight = camRight.normalized;
+    }
+    void setGravity()
+    {
+        if (player.isGrounded) 
+        {
+            fallVelocity = -gravity * Time.deltaTime;
+            movePlayer.y = fallVelocity;
+        }
+        else 
+        {
+            fallVelocity -= gravity * Time.deltaTime;
+            movePlayer.y = fallVelocity;
+        }
     }
 }
