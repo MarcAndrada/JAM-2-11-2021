@@ -25,6 +25,8 @@ public class CharacterBehaviour : MonoBehaviour {
     {
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Vertical");
+
+
     }
 
     private void FixedUpdate()
