@@ -626,8 +626,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805167062}
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 11500000, guid: a80398eca7654014099782fb3416316d, type: 3}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -824,7 +824,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1805167061}
   - component: {fileID: 1805167062}
-  - component: {fileID: 1805167063}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -855,18 +854,6 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805167062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805167060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5bbd180bca73714a88813e969e71665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1805167063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -960,12 +947,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805167062}
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 11500000, guid: a80398eca7654014099782fb3416316d, type: 3}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
