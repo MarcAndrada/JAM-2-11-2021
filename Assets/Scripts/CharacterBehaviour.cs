@@ -39,6 +39,8 @@ public class CharacterBehaviour : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         player = GetComponent<CharacterController>();
 
         audiosrc = GetComponent<AudioSource>();

@@ -19,7 +19,6 @@ public class ComradeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
         objSphere = gameObject.GetComponent<SphereCollider>();
         objColl = gameObject.GetComponent<BoxCollider>();
 
