@@ -57,12 +57,8 @@ public class CharacterBehaviour : MonoBehaviour {
         movePlayer = playerInput.x * camRight + playerInput.z * camForward;
 
         movePlayer = movePlayer * playerSpeed;
-
-        // ROTACION
-        //rotationY = Quaternion.LookRotation(player.transform.position + movePlayer).y;
-        //finalRotation = (transform.rotation.x, rotationY, transform.rotation.z);
-        //transform.rotation = Quaternion.LerpUnclamped(transform.rotation, finalRotation, rotationSpeed);
-
+        player.transform.LookAt(player.transform.position + movePlayer);
+        
         setGravity();
 
         player.Move(movePlayer * Time.deltaTime);
