@@ -34,7 +34,8 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 camForward;
     private Vector3 camRight;
 
-    private Quaternion targetRotation;
+    private float rotationY;
+    private Quaternion finalRotation;
 
     // Start is called before the first frame update
     void Start() {
@@ -58,8 +59,9 @@ public class CharacterBehaviour : MonoBehaviour {
         movePlayer = movePlayer * playerSpeed;
 
         // ROTACION
-        targetRotation = Quaternion.LookRotation(player.transform.position + movePlayer);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed);
+        //rotationY = Quaternion.LookRotation(player.transform.position + movePlayer).y;
+        //finalRotation = (transform.rotation.x, rotationY, transform.rotation.z);
+        //transform.rotation = Quaternion.LerpUnclamped(transform.rotation, finalRotation, rotationSpeed);
 
         setGravity();
 
