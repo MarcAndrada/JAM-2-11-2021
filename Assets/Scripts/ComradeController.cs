@@ -27,7 +27,7 @@ public class ComradeController : MonoBehaviour
         if (FollowTarget != null)
         {
 
-            Vector3 Pos = new Vector3(FollowTarget.transform.localPosition.x, FollowTarget.transform.localPosition.y , FollowTarget.transform.localPosition.z - 2);
+            Vector3 Pos = new Vector3(FollowTarget.transform.localPosition.x, FollowTarget.transform.localPosition.y , FollowTarget.transform.localPosition.z - offset);
             
             gameObject.transform.LookAt(FollowTarget.transform.position);
             transform.position = Vector3.Lerp(transform.position, Pos, Speed * Time.deltaTime);
