@@ -56,9 +56,6 @@ public class SoundManager : MonoBehaviour
         {
             SFX_Cont.SetVolume(SFX);
         }
-       
-
-
     }
 
     private void Update(){
@@ -129,12 +126,8 @@ public class SoundManager : MonoBehaviour
                 {
                     Reload();
                 }
-                
-
             }
         }
-        
-        
     }
 
     // Update is called once per frame
