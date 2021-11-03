@@ -35,7 +35,8 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 camRight;
 
     private AudioSource audiosrc;
-    private AudioClip clip;
+    private AudioClip walk;
+    private AudioClip idle;
 
     // Start is called before the first frame update
     void Start() {
@@ -44,7 +45,8 @@ public class CharacterBehaviour : MonoBehaviour {
         player = GetComponent<CharacterController>();
 
         audiosrc = GetComponent<AudioSource>();
-        clip = Resources.Load<AudioClip>("rolling_loop");
+        walk = Resources.Load<AudioClip>("rolling");
+        idle = Resources.Load<AudioClip>("static");
     }
 
     // Update is called once per frame
@@ -96,9 +98,15 @@ public class CharacterBehaviour : MonoBehaviour {
     }
     void playSound()
     {
-        if (Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") > 0.1f) {
-            if (!audiosrc.isPlaying) {
-                audiosrc.PlayOneShot(clip);
+        if (!audiosrc.isPlaying)
+        {
+            if (Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") > 0.1f) {
+            
+                audiosrc.PlayOneShot(walk);
+            }
+            else
+            {
+                audiosrc.PlayOneShot(idle);
             }
         }
     }
