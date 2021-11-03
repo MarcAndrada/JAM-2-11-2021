@@ -50,7 +50,7 @@ public class ComradeController : MonoBehaviour
             InteractuableObjectController objCont = gameObject.GetComponent<InteractuableObjectController>();
 
             //SONIDO
-            AudioSource.PlayClipAtPoint(clip, transform.position);
+            //AudioSource.PlayClipAtPoint(clip, transform.position);
             
             gameObject.tag = "Untagged";
             objCont.enabled = false; //tambien se puede destruir
