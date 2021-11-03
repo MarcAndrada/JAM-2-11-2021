@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PlayerInteractController : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class PlayerInteractController : MonoBehaviour
             //comprobamos que el numero de camaradas que tenemos sea suficiente para hacer la accion
             if (objCont.GetRequiredCompanions() <= companions)
             {
+                PlayableDirector director;
+                director = GameObject.Find(objCont.GetAnimName()).GetComponent<PlayableDirector>();
+                director.Play();
                 //SceneAnim.SetTrigger(objCont.GetAnimName());
                 //hacer animacion
                 //si la final pos del objeto es diferente a 0 haremos tp al player a esa posicion
@@ -40,10 +44,11 @@ public class PlayerInteractController : MonoBehaviour
                         transform.position = objCont.GetFinalPos();
                     }
                 }
-                else
-                {
-                    //remarcar cartel de camaradas necesarios
-                }
+                
+            }
+            else
+            {
+                //remarcar cartel de camaradas necesarios
             }
             //cuando haya acabado la animacion hacemos que el player aparezca de nuevo
 
