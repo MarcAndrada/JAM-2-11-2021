@@ -10,6 +10,7 @@ public class PlayerInteractController : MonoBehaviour
     private InteractuableObjectController objCont;
 
     private QueueController queueCont;
+    CharacterBehaviour charCont;
 
     [SerializeField]
     Animator SceneAnim;
@@ -17,18 +18,20 @@ public class PlayerInteractController : MonoBehaviour
     void Start()
     {
         queueCont = gameObject.GetComponent<QueueController>();
+        charCont = gameObject.GetComponent<CharacterBehaviour>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //si aprieta el boton de interactuar y esta cerca de algun objeto
         if (Input.GetKeyDown(KeyCode.E) && canInteract && objCont != null)
         {
             //comprobamos que el numero de camaradas que tenemos sea suficiente para hacer la accion
             if (objCont.GetRequiredCompanions() <= companions)
             {
-                SceneAnim.SetTrigger(objCont.GetAnimName());
+                //SceneAnim.SetTrigger(objCont.GetAnimName());
                 //hacer animacion
                 //si la final pos del objeto es diferente a 0 haremos tp al player a esa posicion
                 if (objCont.GetFinalPos().x != 0 && objCont.GetFinalPos().y != 0)
