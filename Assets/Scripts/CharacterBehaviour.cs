@@ -30,6 +30,7 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 camForward;
     private Vector3 camRight;
 
+    private float distance;
 
     // Start is called before the first frame update
     void Start() {
@@ -56,8 +57,9 @@ public class CharacterBehaviour : MonoBehaviour {
 
         setGravity();
 
+        //rotationLerp();
+
         player.Move(movePlayer * Time.deltaTime);
-        
     }
     void camDirection()
     {
@@ -83,4 +85,12 @@ public class CharacterBehaviour : MonoBehaviour {
             movePlayer.y = fallVelocity;
         }
     }
+    //void rotationLerp()
+    //{
+    //    distance = Vector3.Distance(player.transform.position, movePlayer);
+    //    if (distance < 0.5f)
+    //    {
+    //        player.transform.rotation = Quaternion.Lerp()
+    //    }
+    //}
 }
