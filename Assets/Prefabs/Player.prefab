@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8650759024000647686}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,12 +175,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveZ: 0
   moveX: 0
-  playerSpeed: 0
+  playerSpeed: 10
   mainCamera: {fileID: 0}
-  gravity: 0
+  gravity: 15
   fallVelocity: 0
-  rotationSpeed: 0
-  player: {fileID: 0}
+  rotationSpeed: 10
+  player: {fileID: 4477363683584448610}
 --- !u!81 &8650759024000647686
 AudioListener:
   m_ObjectHideFlags: 0
