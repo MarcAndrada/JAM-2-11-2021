@@ -20,6 +20,10 @@ public class CharacterBehaviour : MonoBehaviour {
     [SerializeField]
     private float fallVelocity;
 
+    [SerializeField]
+    private float rotationSpeed;
+
+
     public CharacterController player;
 
     private Vector3 playerInput;
@@ -30,7 +34,7 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 camForward;
     private Vector3 camRight;
 
-    private float distance;
+    private Quaternion targetRotation;
 
     // Start is called before the first frame update
     void Start() {
@@ -53,11 +57,11 @@ public class CharacterBehaviour : MonoBehaviour {
 
         movePlayer = movePlayer * playerSpeed;
 
-        player.transform.LookAt(player.transform.position + movePlayer);
+        // ROTACION
+        targetRotation = Quaternion.LookRotation(player.transform.position + movePlayer);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed);
 
         setGravity();
-
-        //rotationLerp();
 
         player.Move(movePlayer * Time.deltaTime);
     }
@@ -85,12 +89,4 @@ public class CharacterBehaviour : MonoBehaviour {
             movePlayer.y = fallVelocity;
         }
     }
-    //void rotationLerp()
-    //{
-    //    distance = Vector3.Distance(player.transform.position, movePlayer);
-    //    if (distance < 0.5f)
-    //    {
-    //        player.transform.rotation = Quaternion.Lerp()
-    //    }
-    //}
 }

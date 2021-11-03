@@ -1601,6 +1601,11 @@ PrefabInstance:
       propertyPath: gravity
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3120463453125282645, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3225885234437872518, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
         type: 3}
       propertyPath: m_LocalPosition.x
