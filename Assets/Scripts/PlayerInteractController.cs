@@ -10,6 +10,9 @@ public class PlayerInteractController : MonoBehaviour
     private InteractuableObjectController objCont;
 
     private QueueController queueCont;
+
+    [SerializeField]
+    Animator SceneAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +23,17 @@ public class PlayerInteractController : MonoBehaviour
     void Update()
     {
         //si aprieta el boton de interactuar y esta cerca de algun objeto
-        if (true && canInteract && objCont != null)
+        if (Input.GetKeyDown(KeyCode.E) && canInteract && objCont != null)
         {
             //comprobamos que el numero de camaradas que tenemos sea suficiente para hacer la accion
             if (objCont.GetRequiredCompanions() <= companions)
             {
+                SceneAnim.SetTrigger(objCont.GetAnimName());
                 //hacer animacion
                 //si la final pos del objeto es diferente a 0 haremos tp al player a esa posicion
                 if (objCont.GetFinalPos().x != 0 && objCont.GetFinalPos().y != 0)
                 {
+                    transform.position = objCont.GetFinalPos();
                     //hacemos tp al player a la final pos y desactivamos su mesh 
                 }
                 else

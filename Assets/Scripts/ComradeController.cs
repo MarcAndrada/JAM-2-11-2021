@@ -10,10 +10,15 @@ public class ComradeController : MonoBehaviour
     private float Speed;
     [SerializeField]
     private float offset;
+
+    SphereCollider objSphere;
+    BoxCollider objColl;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+        objSphere = gameObject.GetComponent<SphereCollider>();
+        objColl = gameObject.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -37,8 +42,7 @@ public class ComradeController : MonoBehaviour
             FollowTarget = _target;
             //Opcion 1
             InteractuableObjectController objCont = gameObject.GetComponent<InteractuableObjectController>();
-            SphereCollider objSphere = gameObject.GetComponent<SphereCollider>();
-            BoxCollider objColl = gameObject.GetComponent<BoxCollider>();
+            
            
             
             gameObject.tag = "Untagged";

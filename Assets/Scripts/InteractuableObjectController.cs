@@ -20,6 +20,11 @@ public class InteractuableObjectController : MonoBehaviour
         return RequiredCompanions;
     }
 
+    public string GetAnimName()
+    {
+        return AnimName;
+    }
+
     public Vector3 GetFinalPos() {
         return FinalPos;
     }
