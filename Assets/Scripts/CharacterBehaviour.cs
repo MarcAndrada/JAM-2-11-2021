@@ -73,13 +73,13 @@ public class CharacterBehaviour : MonoBehaviour {
 
         camForward = camForward.normalized;
         camRight = camRight.normalized;
-        
     }
     void setGravity()
     {
         if (player.isGrounded) 
         {
-            movePlayer.y = 0;
+            fallVelocity = -gravity * Time.deltaTime;
+            movePlayer.y = fallVelocity;
         }
         else 
         {
