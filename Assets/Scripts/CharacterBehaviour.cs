@@ -34,12 +34,15 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 camForward;
     private Vector3 camRight;
 
-    private float rotationY;
-    private Quaternion finalRotation;
+    private AudioSource audiosrc;
+    private AudioClip clip;
 
     // Start is called before the first frame update
     void Start() {
         player = GetComponent<CharacterController>();
+
+        audiosrc = GetComponent<AudioSource>();
+        clip = Resources.Load<AudioClip>("rolling_loop");
     }
 
     // Update is called once per frame
@@ -62,6 +65,8 @@ public class CharacterBehaviour : MonoBehaviour {
         setGravity();
 
         player.Move(movePlayer * Time.deltaTime);
+
+        playSound();
     }
     void camDirection()
     {
@@ -87,5 +92,12 @@ public class CharacterBehaviour : MonoBehaviour {
             movePlayer.y = fallVelocity;
         }
     }
-
+    void playSound()
+    {
+        if (Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") > 0.1f) {
+            if (!audiosrc.isPlaying) {
+                audiosrc.PlayOneShot(clip);
+            }
+        }
+    }
 }

@@ -24,8 +24,8 @@ public class ComradeController : MonoBehaviour
         objColl = gameObject.GetComponent<BoxCollider>();
 
         //SONIDO
-        clip = Resources.Load<AudioClip>("concept_weapon");
         audiosrc = GetComponent<AudioSource>();
+        clip = Resources.Load<AudioClip>("concept_weapon");
     }
 
     // Update is called once per frame
@@ -60,7 +60,5 @@ public class ComradeController : MonoBehaviour
             gameObject.layer = 8;
            // gameObject.transform.parent = _target.transform;
         }
-        
     }
-
 }
