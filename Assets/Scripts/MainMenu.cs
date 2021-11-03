@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Room");
     }
-
     public void Options()
     {
         SceneManager.LoadScene("Options");
@@ -19,9 +18,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     public void QuitGame ()
     {
         Application.Quit();
     }
 }
-
