@@ -11,6 +11,9 @@ public class ComradeController : MonoBehaviour
     [SerializeField]
     private float offset;
 
+    private AudioClip clip;
+    private AudioSource audiosrc;
+
     SphereCollider objSphere;
     BoxCollider objColl;
     // Start is called before the first frame update
@@ -19,6 +22,10 @@ public class ComradeController : MonoBehaviour
         Cursor.visible = false;
         objSphere = gameObject.GetComponent<SphereCollider>();
         objColl = gameObject.GetComponent<BoxCollider>();
+
+        //SONIDO
+        clip = Resources.Load<AudioClip>("concept_weapon");
+        audiosrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,8 +49,9 @@ public class ComradeController : MonoBehaviour
             FollowTarget = _target;
             //Opcion 1
             InteractuableObjectController objCont = gameObject.GetComponent<InteractuableObjectController>();
-            
-           
+
+            //SONIDO
+            AudioSource.PlayClipAtPoint(clip, transform.position);
             
             gameObject.tag = "Untagged";
             objCont.enabled = false; //tambien se puede destruir
@@ -54,4 +62,5 @@ public class ComradeController : MonoBehaviour
         }
         
     }
+
 }

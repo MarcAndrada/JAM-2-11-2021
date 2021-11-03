@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4477363683584448613}
   - component: {fileID: 4477363683584448612}
   - component: {fileID: 4477363683584448615}
+  - component: {fileID: 8650759024000647686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -180,6 +181,14 @@ MonoBehaviour:
   fallVelocity: 0
   rotationSpeed: 0
   player: {fileID: 0}
+--- !u!81 &8650759024000647686
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666954144494921016}
+  m_Enabled: 1
 --- !u!1 &5510347504791320928
 GameObject:
   m_ObjectHideFlags: 0
