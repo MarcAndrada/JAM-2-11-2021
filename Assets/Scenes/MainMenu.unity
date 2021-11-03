@@ -285,7 +285,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 634434401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6571511526624209517}
+        m_MethodName: Credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &634434401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +589,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1029271761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6571511526624209517}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1029271761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319034821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7685114378744409494, guid: b8c2dd6a4bb404c42beda45947854f4a,
+          type: 3}
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1319034821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,7 +1060,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1866874127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6571511526624209517}
+        m_MethodName: Options
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1866874127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,3 +1178,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c2dd6a4bb404c42beda45947854f4a, type: 3}
+--- !u!114 &6571511526624209517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7685114378744409494, guid: b8c2dd6a4bb404c42beda45947854f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6571511526624209516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80398eca7654014099782fb3416316d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
