@@ -13,6 +13,8 @@ public class PlayerInteractController : MonoBehaviour
     private QueueController queueCont;
 
     [SerializeField]
+    GameObject NeededBalls;
+    [SerializeField]
     Animator SceneAnim;
     // Start is called before the first frame update
     void Start()
@@ -46,10 +48,7 @@ public class PlayerInteractController : MonoBehaviour
                 }
                 
             }
-            else
-            {
-                //remarcar cartel de camaradas necesarios
-            }
+
             //cuando haya acabado la animacion hacemos que el player aparezca de nuevo
 
         }       
@@ -63,6 +62,10 @@ public class PlayerInteractController : MonoBehaviour
             if (objCont.IsAnim())
             {    
                 canInteract = true;
+                if (objCont.GetRequiredCompanions() <= companions)
+                {
+                    //remarcar cartel de camaradas necesarios
+                }
             }
             else 
             {
