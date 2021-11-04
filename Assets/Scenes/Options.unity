@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 1079054587}
   - component: {fileID: 1079054586}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1313532684}
   - component: {fileID: 1313532683}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Sound Logos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,7 +1513,7 @@ GameObject:
   - component: {fileID: 1870885613}
   - component: {fileID: 1870885612}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Sound Logos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
