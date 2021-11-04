@@ -8,11 +8,14 @@ public class PlayerInteractController : MonoBehaviour
     private bool canInteract;
     private int companions;
 
+    private bool Pauseable;
+
     private InteractuableObjectController objCont;
 
     private QueueController queueCont;
 
-
+    [SerializeField]
+    private MainMenu options;
 
     [SerializeField]
     GameObject NeededBalls;
@@ -53,7 +56,14 @@ public class PlayerInteractController : MonoBehaviour
 
             //cuando haya acabado la animacion hacemos que el player aparezca de nuevo
 
-        }       
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && Pauseable){
+            Pauseable = false;
+            options.PauseGame();
+        } if (Input.GetKeyDown(KeyCode.Escape) && !Pauseable){
+            Pauseable = true;
+            options.ResumeGame();
+        }      
     }
 
     private void OnTriggerEnter(Collider collision)
