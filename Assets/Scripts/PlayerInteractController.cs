@@ -47,7 +47,7 @@ public class PlayerInteractController : MonoBehaviour
             TimeWaited += Time.deltaTime;
 
         
-            if (TimeToWait > TimeWaited)
+            if (TimeToWait < TimeWaited)
             {
                 SceneManager.LoadScene("Credits");
 
