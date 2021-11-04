@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using TMPro;
 
 public class PlayerInteractController : MonoBehaviour
 {
@@ -16,11 +17,15 @@ public class PlayerInteractController : MonoBehaviour
 
     [SerializeField]
     private MainMenu options;
+    private GameObject ObjectText;
 
     [SerializeField]
     GameObject NeededBalls;
     [SerializeField]
     Animator SceneAnim;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +81,8 @@ public class PlayerInteractController : MonoBehaviour
                 canInteract = true;
                 if (objCont.GetRequiredCompanions() <= companions)
                 {
+                    ObjectText = GameObject.FindGameObjectWithTag("Canvas_Object");
+                    ObjectText.SetActive(true);
                     //remarcar cartel de camaradas necesarios
                 }
             }
@@ -93,6 +100,10 @@ public class PlayerInteractController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Object")
         {
+            if (ObjectText != null)
+            {
+                ObjectText.SetActive(true);
+            }
             canInteract = false;
             objCont = null;
         }

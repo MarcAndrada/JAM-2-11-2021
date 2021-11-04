@@ -29,19 +29,20 @@ public class NumberController : MonoBehaviour
         transform.position = particulas.transform.position;
         textMesh = gameObject.GetComponent<TextMeshPro>();
         requiredCompanion = anim.GetRequiredCompanions();
-        playerCompanion = companionCount.GetCompanions();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerCompanion < requiredCompanion) {
-            textMesh.text = requiredCompanion.ToString();
+        playerCompanion = companionCount.GetCompanions();
+
+        if (playerCompanion >= requiredCompanion) {
+            textMesh.text = "E";
         }
         else
         {
-            textMesh.text = "E";
+            textMesh.text = requiredCompanion.ToString();
         }
         transform.LookAt(player.transform.position);
         transform.Rotate(new Vector3(0,-1,0),180);
