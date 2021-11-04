@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerInteractController : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerInteractController : MonoBehaviour
     private CanvasTextController ObjectText;
 
     [SerializeField]
+    Text HUDText;
+    [SerializeField]
     GameObject NeededBalls;
     [SerializeField]
     Animator SceneAnim;
@@ -30,6 +33,7 @@ public class PlayerInteractController : MonoBehaviour
     void Start()
     {
         queueCont = gameObject.GetComponent<QueueController>();
+        HUDText.text = companions.ToString();
     }
 
     // Update is called once per frame
@@ -89,6 +93,7 @@ public class PlayerInteractController : MonoBehaviour
                 companions++;
                 queueCont.AddNewComrade(collision.gameObject);
                 objCont = null;
+                HUDText.text = companions.ToString();
                 //hacer funcion de añadir camarada a la cola
             }
         }
