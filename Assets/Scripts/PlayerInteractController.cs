@@ -17,7 +17,7 @@ public class PlayerInteractController : MonoBehaviour
 
     [SerializeField]
     private MainMenu options;
-    private GameObject ObjectText;
+    private CanvasTextController ObjectText;
 
     [SerializeField]
     GameObject NeededBalls;
@@ -79,15 +79,13 @@ public class PlayerInteractController : MonoBehaviour
             if (objCont.IsAnim())
             {    
                 canInteract = true;
-                if (objCont.GetRequiredCompanions() <= companions)
-                {
-                    ObjectText = GameObject.FindGameObjectWithTag("Canvas_Object");
-                    ObjectText.SetActive(true);
-                    //remarcar cartel de camaradas necesarios
-                }
+                ObjectText = collision.gameObject.GetComponentInChildren<CanvasTextController>();
+                ObjectText.ActivateNumber();
+                
             }
             else 
             {
+
                 companions++;
                 queueCont.AddNewComrade(collision.gameObject);
                 objCont = null;
@@ -102,7 +100,7 @@ public class PlayerInteractController : MonoBehaviour
         {
             if (ObjectText != null)
             {
-                ObjectText.SetActive(true);
+                ObjectText.DesapearNumber();
             }
             canInteract = false;
             objCont = null;

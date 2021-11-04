@@ -48,13 +48,5 @@ public class NumberController : MonoBehaviour
         transform.Rotate(new Vector3(0,-1,0),180);
     }
 
-    public void DesapearNumber() 
-    {
-        textMesh.enabled = false;
-    }
-
-    public void ActivateNumber()
-    {
-        textMesh.enabled = true;
-    }
+   
 }
