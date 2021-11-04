@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QueueController : MonoBehaviour
-{
-
+{ 
+    [SerializeField]
+    private AudioClip clip;
     [SerializeField]
     GameObject LastInQueue;
+
+    private AudioSource audiosrc;
+
     // Start is called before the first frame update
     void Start()
     {
         LastInQueue = gameObject;
+
     }
 
     // Update is called once per frame
