@@ -8,6 +8,7 @@ TagManager:
   - Music_Slider
   - SFX_Slider
   - Aliados
+  - Canvas_Object
   layers:
   - Default
   - TransparentFX
