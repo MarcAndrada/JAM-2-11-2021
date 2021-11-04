@@ -100,5 +100,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3586c412120df74db9d693206b6a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: {fileID: 0}
-  Room: {fileID: 0}
+  MainMenu: {fileID: 8300000, guid: 54d6893294b6ec94c9837ee8bd8e456b, type: 3}
+  Room: {fileID: 8300000, guid: 5cd7cb78fd47c1247b732987209e6830, type: 3}

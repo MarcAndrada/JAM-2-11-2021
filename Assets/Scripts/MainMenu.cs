@@ -8,11 +8,16 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject optionMenu;
 
+    private AudioSource audiosrc;
+    public AudioClip clip;
+
     private SoundManager soundManager;
     // Start is called before the first frame update
     private void Start()
     {
         soundManager = SoundManager.FindObjectOfType<SoundManager>();
+
+        audiosrc = GetComponent<AudioSource>();
     }
     public void PlayGame ()
     {
@@ -20,6 +25,7 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("Room");
         soundManager.Reload();
+        audiosrc.PlayOneShot(clip);
     }
     public void Options()
     {
@@ -27,6 +33,7 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Options");
         soundManager.Reload();
+        audiosrc.PlayOneShot(clip);
     }
     public void mainMenu()
     {
@@ -34,6 +41,7 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("MainMenu");
         soundManager.Reload();
+        audiosrc.PlayOneShot(clip);
     }
     public void Credits()
     {
@@ -41,9 +49,11 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Credits");
         soundManager.Reload();
+        audiosrc.PlayOneShot(clip);
     }
     public void QuitGame ()
     {
+        audiosrc.PlayOneShot(clip);
         Application.Quit();
     }
     public void PauseGame()
@@ -57,6 +67,7 @@ public class MainMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        audiosrc.PlayOneShot(clip);
         Time.timeScale = 1;
         optionMenu.SetActive(false);// que la velocidad del juego regrese a 1
         Cursor.visible = false;
