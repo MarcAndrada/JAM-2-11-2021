@@ -220,7 +220,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -347,7 +347,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146496199}
-  m_LocalRotation: {x: 0.25526977, y: 0.000000032392983, z: -0.000000008552287, w: 0.96686983}
+  m_LocalRotation: {x: 0.25526977, y: -0.000000032392986, z: 0.000000008552287, w: 0.96686995}
   m_LocalPosition: {x: 0, y: 9.02, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -453,7 +453,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -734,7 +734,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236150789}
-  m_LocalRotation: {x: 0.3404253, y: 0.0000000110217195, z: -0.0000000039904102, w: 0.9402716}
+  m_LocalRotation: {x: 0.34042528, y: -0.000000030111902, z: 0.000000010902015, w: 0.9402716}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -808,7 +808,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293206532}
-  m_LocalRotation: {x: 0.25526974, y: 0.000000029012577, z: -0.000000007659805, w: 0.96686995}
+  m_LocalRotation: {x: 0.2552697, y: -0.0000000033804077, z: 8.9248114e-10, w: 0.96686995}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -827,6 +827,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 146496199}
+    - target: {fileID: 2023705189, guid: b308b3f2f931a1c48a33ef62d3fa5202, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 864526727961967669, guid: b308b3f2f931a1c48a33ef62d3fa5202,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -880,6 +884,31 @@ PrefabInstance:
     - target: {fileID: 864526727961967669, guid: b308b3f2f931a1c48a33ef62d3fa5202,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864526727961967678, guid: b308b3f2f931a1c48a33ef62d3fa5202,
+        type: 3}
+      propertyPath: RequiredCompanions
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 864526727961967678, guid: b308b3f2f931a1c48a33ef62d3fa5202,
+        type: 3}
+      propertyPath: AnimName
+      value: sadadsads
+      objectReference: {fileID: 0}
+    - target: {fileID: 864526727961967678, guid: b308b3f2f931a1c48a33ef62d3fa5202,
+        type: 3}
+      propertyPath: FinalPos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864526727961967678, guid: b308b3f2f931a1c48a33ef62d3fa5202,
+        type: 3}
+      propertyPath: FinalPos.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864526727961967678, guid: b308b3f2f931a1c48a33ef62d3fa5202,
+        type: 3}
+      propertyPath: FinalPos.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 864526727961967679, guid: b308b3f2f931a1c48a33ef62d3fa5202,
@@ -1096,7 +1125,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -1181,7 +1210,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
-    m_InvertInput: 0
+    m_InvertInput: 1
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -1204,7 +1233,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
