@@ -15,7 +15,7 @@ public class QueueController : MonoBehaviour
     void Start()
     {
         LastInQueue = gameObject;
-
+        audiosrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class QueueController : MonoBehaviour
 
     public void AddNewComrade(GameObject _newComrade) 
     {
+        audiosrc.PlayOneShot(clip);
         ComradeController comradeCont;
         comradeCont = _newComrade.GetComponent<ComradeController>();
         comradeCont.WhoWillFollow(LastInQueue);
