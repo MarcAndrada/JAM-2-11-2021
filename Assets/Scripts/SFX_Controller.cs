@@ -12,8 +12,7 @@ public class SFX_Controller : MonoBehaviour
 
     private SoundManager sound;
     private float Volume = 0.1f;
-
-    private void Start()
+        private void Start()
     {
         sound = GetComponent<SoundManager>();
         player = GameObject.FindGameObjectWithTag("Player");

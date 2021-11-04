@@ -34,7 +34,6 @@ public class CharacterBehaviour : MonoBehaviour {
 
     private AudioSource audiosrc;
     private AudioClip walk;
-    private AudioClip idle;
 
     // Start is called before the first frame update
     void Start() {
@@ -44,7 +43,6 @@ public class CharacterBehaviour : MonoBehaviour {
 
         audiosrc = GetComponent<AudioSource>();
         walk = Resources.Load<AudioClip>("rolling");
-        idle = Resources.Load<AudioClip>("static");
     }
 
     // Update is called once per frame
@@ -101,10 +99,6 @@ public class CharacterBehaviour : MonoBehaviour {
             if (Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") > 0.1f) {
             
                 audiosrc.PlayOneShot(walk);
-            }
-            else
-            {
-                audiosrc.PlayOneShot(idle);
             }
         }
     }

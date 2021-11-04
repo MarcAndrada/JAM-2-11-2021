@@ -31,7 +31,7 @@ public class VolumeController : MonoBehaviour
         {
             audiosouce.clip = null;
         }
-        else if (ActiveScene.name == "Room" || ActiveScene.name == "Tutorial")
+        else if (ActiveScene.name == "Room" || ActiveScene.name == "MainMenu")
         {
             if (audiosouce.clip != Room)
             {

@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        soundManager = SoundManager.FindObjectOfType<SoundManager>();
+        soundManager = gameObject.GetComponent<SoundManager>();
 
         audiosrc = GetComponent<AudioSource>();
     }
@@ -24,6 +24,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("Room");
+        soundManager = gameObject.GetComponent<SoundManager>();
         soundManager.Reload();
         audiosrc.PlayOneShot(clip);
     }
@@ -32,6 +33,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Options");
+        soundManager = gameObject.GetComponent<SoundManager>();
         soundManager.Reload();
         audiosrc.PlayOneShot(clip);
     }
@@ -40,6 +42,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("MainMenu");
+        soundManager = gameObject.GetComponent<SoundManager>();
         soundManager.Reload();
         audiosrc.PlayOneShot(clip);
     }
@@ -48,6 +51,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Credits");
+        soundManager = gameObject.GetComponent<SoundManager>();
         soundManager.Reload();
         audiosrc.PlayOneShot(clip);
     }
@@ -62,6 +66,7 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
         optionMenu.SetActive(true);
+        soundManager = gameObject.GetComponent<SoundManager>();
         soundManager.Reload();
     }
 
