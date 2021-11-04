@@ -12,6 +12,8 @@ public class PlayerInteractController : MonoBehaviour
 
     private QueueController queueCont;
 
+
+
     [SerializeField]
     GameObject NeededBalls;
     [SerializeField]
@@ -86,4 +88,8 @@ public class PlayerInteractController : MonoBehaviour
         }
     }
 
+    public int GetCompanions()
+    {
+        return companions;
+    }
 }
