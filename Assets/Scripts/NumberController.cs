@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using TMPro;
+
 
 public class NumberController : MonoBehaviour
 {
@@ -13,8 +17,7 @@ public class NumberController : MonoBehaviour
     private PlayerInteractController companionCount;
     [SerializeField]
     private GameObject player;
-
-    private GameObject textGameObject;
+    private TextMeshPro textMesh;
 
     private int requiredCompanion;
     private int playerCompanion;
@@ -22,10 +25,9 @@ public class NumberController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        companionCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteractController>();
         transform.position = particulas.transform.position;
-
-        textGameObject = GetComponent<GameObject>();
-
+        textMesh = gameObject.GetComponent<TextMeshPro>();
         requiredCompanion = anim.GetRequiredCompanions();
         playerCompanion = companionCount.GetCompanions();
 
@@ -35,13 +37,23 @@ public class NumberController : MonoBehaviour
     void Update()
     {
         if(playerCompanion < requiredCompanion) {
-            textGameObject.GetComponent<UnityEngine.UI.Text>().text = "3";
+            textMesh.text = requiredCompanion.ToString();
         }
         else
         {
-            textGameObject.GetComponent<UnityEngine.UI.Text>().text = "E";
+            textMesh.text = "E";
         }
         transform.LookAt(player.transform.position);
-        transform.Rotate(new Vector3(0,0,-1),180);
+        transform.Rotate(new Vector3(0,-1,0),180);
+    }
+
+    public void DesapearNumber() 
+    {
+        textMesh.enabled = false;
+    }
+
+    public void ActivateNumber()
+    {
+        textMesh.enabled = true;
     }
 }
