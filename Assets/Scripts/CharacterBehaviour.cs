@@ -23,14 +23,12 @@ public class CharacterBehaviour : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed;
 
-
     public CharacterController player;
 
     private Vector3 playerInput;
 
     private Vector3 movePlayer;
     
-
     private Vector3 camForward;
     private Vector3 camRight;
 

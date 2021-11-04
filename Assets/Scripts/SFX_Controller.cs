@@ -34,10 +34,9 @@ public class SFX_Controller : MonoBehaviour
             {
                 playerS = player.GetComponent<AudioSource>();
             }
-            
         }
                
-        Aliados = GameObject.FindGameObjectsWithTag("Enemy");
+        Aliados = GameObject.FindGameObjectsWithTag("Aliados");
 
         for (int i = 0; i < Aliados.Length; i++)
         {
@@ -46,7 +45,6 @@ public class SFX_Controller : MonoBehaviour
             {   
                 AliadosD.volume = Volume;
             }
-            
         }
         
         if (player != null)
@@ -61,6 +59,5 @@ public class SFX_Controller : MonoBehaviour
         {
             Volume = vol;
         }
-
     }
 }

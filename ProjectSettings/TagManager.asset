@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - Music_Slider
+  - SFX_Slider
   layers:
   - Default
   - TransparentFX

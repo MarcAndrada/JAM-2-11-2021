@@ -235,6 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneManager: {fileID: 6571511528173413161, guid: b8c2dd6a4bb404c42beda45947854f4a,
     type: 3}
+  SoundManager: {fileID: 3953171654691466656, guid: f172b35dcc2fd3a45855b231bc29c942,
+    type: 3}
 --- !u!4 &757052639
 Transform:
   m_ObjectHideFlags: 0

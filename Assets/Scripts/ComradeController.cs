@@ -52,7 +52,7 @@ public class ComradeController : MonoBehaviour
             //SONIDO
             //AudioSource.PlayClipAtPoint(clip, transform.position);
             
-            gameObject.tag = "Untagged";
+            gameObject.tag = "Aliados";
             objCont.enabled = false; //tambien se puede destruir
             objSphere.enabled = false;
             //objColl.enabled = false;

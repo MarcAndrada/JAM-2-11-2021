@@ -139,8 +139,6 @@ public class SoundManager : MonoBehaviour
     {
        return SFX;
     }
-
-
     public void SaveValues()
     {
         BinaryWriter writer = new BinaryWriter(File.Open("sound.sav", FileMode.Create));
