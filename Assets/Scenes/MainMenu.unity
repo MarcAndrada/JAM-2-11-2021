@@ -208,6 +208,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 108.84889
       objectReference: {fileID: 0}
+    - target: {fileID: 3373989917473723530, guid: 6b41f3c1b003c264cb3f5cd22d177170,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8196392405725892685, guid: 6b41f3c1b003c264cb3f5cd22d177170,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -230,7 +235,6 @@ GameObject:
   m_Component:
   - component: {fileID: 63780622}
   - component: {fileID: 63780621}
-  - component: {fileID: 63780620}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -238,14 +242,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &63780620
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63780619}
-  m_Enabled: 1
 --- !u!20 &63780621
 Camera:
   m_ObjectHideFlags: 0
@@ -685,6 +681,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 16.28238
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477363683584448612, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477363683584448613, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477363683584448615, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650759024000647686, guid: 84d3cb1cc4cbf5844b1925a3472717c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84d3cb1cc4cbf5844b1925a3472717c5, type: 3}
@@ -1546,6 +1562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 108.84895
+      objectReference: {fileID: 0}
+    - target: {fileID: 3373989917473723530, guid: 6b41f3c1b003c264cb3f5cd22d177170,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b41f3c1b003c264cb3f5cd22d177170, type: 3}
