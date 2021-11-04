@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80398eca7654014099782fb3416316d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionMenu: {fileID: 7189971942101245977, guid: 64a76afcb18a3f845a85e19630ed8a0c,
+    type: 3}
 --- !u!82 &-1644889722886217199
 AudioSource:
   m_ObjectHideFlags: 0
