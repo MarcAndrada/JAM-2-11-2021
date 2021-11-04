@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options: {fileID: 0}
+  HUDText: {fileID: 5720106742491980718}
   NeededBalls: {fileID: 0}
-  SceneAnim: {fileID: 0}
 --- !u!114 &4477363683584448612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +377,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4154698135927816066}
     m_Modifications:
+    - target: {fileID: 3986588981176352165, guid: 64a76afcb18a3f845a85e19630ed8a0c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -46.200073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986588981176352165, guid: 64a76afcb18a3f845a85e19630ed8a0c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 7189971942101245977, guid: 64a76afcb18a3f845a85e19630ed8a0c,
         type: 3}
       propertyPath: m_Name
@@ -495,3 +505,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7227266875340883468}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5720106742491980718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3111299224028390818, guid: 64a76afcb18a3f845a85e19630ed8a0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7227266875340883468}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,8 +14,6 @@ public class HudController : MonoBehaviour
     [SerializeField]
     GameObject D;
     [SerializeField]
-    GameObject Mouse;
-    [SerializeField]
     GameObject Image1;
     [SerializeField]
     GameObject Image2;
@@ -37,7 +35,6 @@ public class HudController : MonoBehaviour
             D.SetActive(false);
             Image1.SetActive(false);
             Image2.SetActive(false);
-            Mouse.SetActive(false);
 
 
         }

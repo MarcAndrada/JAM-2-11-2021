@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerInteractController : MonoBehaviour
 {
@@ -16,18 +18,16 @@ public class PlayerInteractController : MonoBehaviour
 
     private QueueController queueCont;
 
+    private float TimeToWait = 17;
+    private float TimeWaited;
     [SerializeField]
     private MainMenu options;
     private CanvasTextController ObjectText;
-
+    private bool Do = false;
     [SerializeField]
     Text HUDText;
     [SerializeField]
     GameObject NeededBalls;
-    [SerializeField]
-    Animator SceneAnim;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,20 @@ public class PlayerInteractController : MonoBehaviour
     void Update()
     {
 
+        if (Do)
+        {
+
+       
+            TimeWaited += Time.deltaTime;
+
+        
+            if (TimeToWait > TimeWaited)
+            {
+                SceneManager.LoadScene("Credits");
+
+            }
+        }
+
         //si aprieta el boton de interactuar y esta cerca de algun objeto
         if (Input.GetKey(KeyCode.E) && canInteract && objCont != null)
         {
@@ -49,6 +63,11 @@ public class PlayerInteractController : MonoBehaviour
                 PlayableDirector director;
                 director = GameObject.Find(objCont.GetAnimName()).GetComponent<PlayableDirector>();
                 director.Play();
+                if (objCont.GetAnimName() == "EscapeVentanaTimeLine")
+                {
+                    Do = true;
+                }
+
                 //SceneAnim.SetTrigger(objCont.GetAnimName());
                 //hacer animacion
                 //si la final pos del objeto es diferente a 0 haremos tp al player a esa posicion
