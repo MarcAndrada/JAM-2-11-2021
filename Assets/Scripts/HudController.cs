@@ -1,27 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class HudController : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject W;
+    Image W;
     [SerializeField]
-    GameObject A;
+    Image A;
     [SerializeField]
-    GameObject S;
+    Image S;
     [SerializeField]
-    GameObject D;
+    Image D;
     [SerializeField]
-    GameObject Image1;
+    Image Image1;
     [SerializeField]
-    GameObject Image2;
+    Image Image2;
+    [SerializeField]
+    Image Mouse;
 
-
-    private float TimeToDestroy = 5;
+    float alpha = 1;
+    Color coloralpha;
+    private float TimeToDestroy = 3;
     private float TimePassed;
-
+    private void Start()
+    {
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,12 +36,14 @@ public class HudController : MonoBehaviour
 
         if (TimeToDestroy <= TimePassed)
         {
-            W.SetActive(false);
-            A.SetActive(false);
-            S.SetActive(false);
-            D.SetActive(false);
-            Image1.SetActive(false);
-            Image2.SetActive(false);
+            alpha -= 0.1f * Time.deltaTime;
+            W.color = new Color(1, 1, 1, alpha);
+            A.color = new Color(1,1,1, alpha);
+            S.color = new Color(1, 1, 1, alpha);
+            D.color = new Color(1, 1, 1, alpha);
+            Image1.color = new Color(1, 1, 1, alpha);
+            Image2.color = new Color(1, 1, 1, alpha);
+            Mouse.color = new Color(1, 1, 1, alpha);
 
 
         }

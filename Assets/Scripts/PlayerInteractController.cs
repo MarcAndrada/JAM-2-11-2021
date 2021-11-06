@@ -18,7 +18,7 @@ public class PlayerInteractController : MonoBehaviour
 
     private QueueController queueCont;
 
-    private float TimeToWait = 17;
+    private float TimeToWait = 20;
     private float TimeWaited;
     [SerializeField]
     private MainMenu options;

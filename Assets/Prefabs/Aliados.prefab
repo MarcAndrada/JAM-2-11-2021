@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowTarget: {fileID: 0}
-  Speed: 2.5
-  offset: 3
+  Speed: 1.5
+  offset: 2
 --- !u!1 &6667777865670964609
 GameObject:
   m_ObjectHideFlags: 0
