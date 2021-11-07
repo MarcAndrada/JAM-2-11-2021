@@ -24,7 +24,7 @@ public class HudController : MonoBehaviour
 
     float alpha = 1;
     Color coloralpha;
-    private float TimeToDestroy = 3;
+    private float TimeToDestroy = 1.5f;
     private float TimePassed;
     private void Start()
     {
@@ -36,7 +36,7 @@ public class HudController : MonoBehaviour
 
         if (TimeToDestroy <= TimePassed)
         {
-            alpha -= 0.1f * Time.deltaTime;
+            alpha -= 0.2f * Time.deltaTime;
             W.color = new Color(1, 1, 1, alpha);
             A.color = new Color(1,1,1, alpha);
             S.color = new Color(1, 1, 1, alpha);

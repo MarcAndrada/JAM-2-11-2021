@@ -12,8 +12,6 @@ public class PlayerInteractController : MonoBehaviour
     private bool canInteract;
     private int companions;
 
-    private bool Pauseable;
-
     private InteractuableObjectController objCont;
 
     private QueueController queueCont;
@@ -21,17 +19,18 @@ public class PlayerInteractController : MonoBehaviour
     private float TimeToWait = 20;
     private float TimeWaited;
     [SerializeField]
+    private GameObject inGameOptions;
+    [SerializeField]
     private MainMenu options;
     private CanvasTextController ObjectText;
     private bool Do = false;
     [SerializeField]
     Text HUDText;
-    [SerializeField]
-    GameObject NeededBalls;
 
     // Start is called before the first frame update
     void Start()
     {
+
         queueCont = gameObject.GetComponent<QueueController>();
         HUDText.text = companions.ToString();
     }
@@ -42,15 +41,12 @@ public class PlayerInteractController : MonoBehaviour
 
         if (Do)
         {
-
-       
             TimeWaited += Time.deltaTime;
 
         
             if (TimeToWait < TimeWaited)
             {
-                SceneManager.LoadScene("Credits");
-
+                options.Credits();                
             }
         }
 
@@ -85,11 +81,13 @@ public class PlayerInteractController : MonoBehaviour
             //cuando haya acabado la animacion hacemos que el player aparezca de nuevo
 
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && Pauseable){
-            Pauseable = false;
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
+        {
+            inGameOptions.SetActive(true);
             options.PauseGame();
-        } if (Input.GetKeyDown(KeyCode.Escape) && !Pauseable){
-            Pauseable = true;
+        } else if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
+        {
+            inGameOptions.SetActive(false);
             options.ResumeGame();
         }      
     }

@@ -9,6 +9,7 @@ TagManager:
   - SFX_Slider
   - Aliados
   - Canvas_Object
+  - Managers
   layers:
   - Default
   - TransparentFX

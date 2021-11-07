@@ -28,11 +28,12 @@ public class CharacterBehaviour : MonoBehaviour {
     private Vector3 playerInput;
 
     private Vector3 movePlayer;
-    
+
     private Vector3 camForward;
     private Vector3 camRight;
 
     private AudioSource audiosrc;
+    [SerializeField]
     private AudioClip walk;
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class CharacterBehaviour : MonoBehaviour {
         player = GetComponent<CharacterController>();
 
         audiosrc = GetComponent<AudioSource>();
-        walk = Resources.Load<AudioClip>("rolling");
+       // walk = Resources.Load<AudioClip>("rolling");
     }
 
     // Update is called once per frame
@@ -66,7 +67,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
         player.Move(movePlayer * Time.deltaTime);
 
-        playSound();
+        //playSound();
     }
     void camDirection()
     {
@@ -92,7 +93,7 @@ public class CharacterBehaviour : MonoBehaviour {
             movePlayer.y = fallVelocity;
         }
     }
-    void playSound()
+   /* void playSound()
     {
         if (!audiosrc.isPlaying)
         {
@@ -102,4 +103,5 @@ public class CharacterBehaviour : MonoBehaviour {
             }
         }
     }
+   */
 }

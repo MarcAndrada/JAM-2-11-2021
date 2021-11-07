@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3953171654691466656
+--- !u!1 &1072015947343214197
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,82 +8,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3953171654691466660}
-  - component: {fileID: 3953171654691466659}
-  - component: {fileID: 3953171654691466658}
-  - component: {fileID: 372246118136099539}
-  - component: {fileID: 8933479167958349287}
+  - component: {fileID: 3883077005924802223}
+  - component: {fileID: 7389995370884354573}
+  - component: {fileID: 3074986695666180590}
+  - component: {fileID: 5025527258961201461}
   m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
+  m_Name: VolumeController
+  m_TagString: Managers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3953171654691466660
+--- !u!4 &3883077005924802223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953171654691466656}
+  m_GameObject: {fileID: 1072015947343214197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 234.08966, y: 140.34047, z: 32.976986}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4969215862115659024}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3953171654691466659
+--- !u!114 &7389995370884354573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953171654691466656}
+  m_GameObject: {fileID: 1072015947343214197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b392beed09529874cae2d9ac114c92bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f3586c412120df74db9d693206b6a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3953171654691466658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953171654691466656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 523ba3a36fe6d0c449c0723c74a799d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &372246118136099539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953171654691466656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80398eca7654014099782fb3416316d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionMenu: {fileID: 7189971942101245977, guid: 3bf70a6bc9ef9964b8a10ba676a5274c,
-    type: 3}
-  clip: {fileID: 8300000, guid: 6a6ed1a9c20d33945a028a95f1f0eb0c, type: 3}
---- !u!82 &8933479167958349287
+  MainMenu: {fileID: 8300000, guid: 54d6893294b6ec94c9837ee8bd8e456b, type: 3}
+  Room: {fileID: 8300000, guid: 5cd7cb78fd47c1247b732987209e6830, type: 3}
+  MusicAudiosouce: {fileID: 3074986695666180590}
+  AudioSourceSFX: {fileID: 5025527258961201461}
+--- !u!82 &3074986695666180590
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3953171654691466656}
+  m_GameObject: {fileID: 1072015947343214197}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9200583132287686797, guid: d6a903be0a20647418052327e09228a6,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -170,59 +146,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &9220511494195856842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4969215862115659024}
-  - component: {fileID: 1701181071230935474}
-  - component: {fileID: 6609536658976887377}
-  m_Layer: 0
-  m_Name: VolumeController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4969215862115659024
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220511494195856842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3953171654691466660}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701181071230935474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220511494195856842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3586c412120df74db9d693206b6a21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenu: {fileID: 8300000, guid: 54d6893294b6ec94c9837ee8bd8e456b, type: 3}
-  Room: {fileID: 8300000, guid: 5cd7cb78fd47c1247b732987209e6830, type: 3}
---- !u!82 &6609536658976887377
+--- !u!82 &5025527258961201461
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220511494195856842}
+  m_GameObject: {fileID: 1072015947343214197}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}

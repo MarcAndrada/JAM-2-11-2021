@@ -7,53 +7,50 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject optionMenu;
+    [SerializeField]
+    private AudioClip clip;
 
+    private GameObject ManagersObj;
+    private VolumeController sourceController;
+    [SerializeField]
     private AudioSource audiosrc;
-    public AudioClip clip;
 
-    private SoundManager soundManager;
     // Start is called before the first frame update
     private void Start()
     {
-        soundManager = gameObject.GetComponent<SoundManager>();
-
-        audiosrc = GetComponent<AudioSource>();
+        ManagersObj = GameObject.FindGameObjectWithTag("Managers");
+        sourceController = ManagersObj.GetComponent<VolumeController>();
+        audiosrc = sourceController.SFXAudioSource();
     }
     public void PlayGame ()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene("Room");
-        soundManager = gameObject.GetComponent<SoundManager>();
-        soundManager.Reload();
         audiosrc.PlayOneShot(clip);
+        SceneManager.LoadScene("Room");
+        Time.timeScale = 1;
     }
     public void Options()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        SceneManager.LoadScene("Options");
-        soundManager = gameObject.GetComponent<SoundManager>();
-        soundManager.Reload();
         audiosrc.PlayOneShot(clip);
+        SceneManager.LoadScene("Options");
+        
     }
     public void mainMenu()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        SceneManager.LoadScene("MainMenu");
-        soundManager = gameObject.GetComponent<SoundManager>();
-        soundManager.Reload();
         audiosrc.PlayOneShot(clip);
+        SceneManager.LoadScene("MainMenu");
     }
     public void Credits()
     {
+        audiosrc.PlayOneShot(clip);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene("Credits");
-        soundManager = gameObject.GetComponent<SoundManager>();
-        soundManager.Reload();
-        audiosrc.PlayOneShot(clip);
     }
     public void QuitGame ()
     {
@@ -62,18 +59,18 @@ public class MainMenu : MonoBehaviour
     }
     public void PauseGame()
     {
+        audiosrc.PlayOneShot(clip);
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
         optionMenu.SetActive(true);
-        soundManager = gameObject.GetComponent<SoundManager>();
-        soundManager.Reload();
     }
 
     public void ResumeGame()
     {
-        audiosrc.PlayOneShot(clip);
         Time.timeScale = 1;
+        audiosrc.PlayOneShot(clip);
         optionMenu.SetActive(false);// que la velocidad del juego regrese a 1
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

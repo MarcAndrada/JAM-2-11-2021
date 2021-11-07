@@ -5,19 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class VolumeController : MonoBehaviour
 {
+    [SerializeField]
     public AudioClip MainMenu;
+    [SerializeField]
     public AudioClip Room;
 
-    private AudioSource audiosouce;
-    private float musicVolume;
+    [SerializeField]
+    private AudioSource MusicAudiosouce;
+    [SerializeField]
+    private AudioSource AudioSourceSFX;
     private Scene ActiveScene;
-    private SoundManager sound;
     // Start is called before the first frame update
     void Start()
     {
-        audiosouce = GetComponent<AudioSource>();
-        sound = GetComponentInParent<SoundManager>();
-        musicVolume = sound.GetMusicVol();
+
     }
 
     // Update is called once per frame
@@ -25,30 +26,25 @@ public class VolumeController : MonoBehaviour
     {
         ActiveScene = SceneManager.GetActiveScene();
 
-        audiosouce.volume = musicVolume;
-
-        if (!audiosouce.isPlaying)
+        /*if (!MusicAudiosouce.isPlaying)
         {
-            audiosouce.clip = null;
-        }
-        else if (ActiveScene.name == "Room" || ActiveScene.name == "MainMenu")
+            MusicAudiosouce.clip = null;
+        }*/
+         if (ActiveScene.name == "Room" || ActiveScene.name == "MainMenu")
         {
-            if (audiosouce.clip != Room)
+            if (MusicAudiosouce.clip != Room)
             {
-                audiosouce.Stop();
-                audiosouce.PlayOneShot(Room);
-                audiosouce.clip = Room;
+                MusicAudiosouce.Stop();
+                MusicAudiosouce.PlayOneShot(Room);
+                MusicAudiosouce.clip = Room;
             }
             /*audiosouce.clip = Level1;
             audiosouce.playOnAwake = Level1;*/
         }
     }
-    public void SetVolume(float vol)
+
+    public AudioSource SFXAudioSource()
     {
-        if (sound != null)
-        {
-            musicVolume = vol;
-        }
-        
+        return AudioSourceSFX;
     }
 }
