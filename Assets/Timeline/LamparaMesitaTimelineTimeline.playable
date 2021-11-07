@@ -222,15 +222,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 10.566667
         value: {x: -1.4100056, y: 7.82, z: 63.64}
-        inSlope: {x: -94.501434, y: 8.400043, z: 0}
-        outSlope: {x: -94.501434, y: 8.400043, z: 0}
+        inSlope: {x: -69.00109, y: 111.60168, z: 0}
+        outSlope: {x: -69.00109, y: 111.60168, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 10.583333
-        value: {x: -3.0700054, y: 7.89, z: 63.639996}
+        value: {x: -2.220007, y: 8.75, z: 62.289997}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -311,15 +311,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 10.566667
         value: -1.4100056
-        inSlope: -94.501434
-        outSlope: -94.501434
+        inSlope: -69.00109
+        outSlope: -69.00109
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 10.583333
-        value: -3.0700054
+        value: -2.220007
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -357,15 +357,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 10.566667
         value: 7.82
-        inSlope: 8.400043
-        outSlope: 8.400043
+        inSlope: 111.60168
+        outSlope: 111.60168
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 10.583333
-        value: 7.89
+        value: 8.75
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -411,7 +411,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 10.583333
-        value: 63.639996
+        value: 62.289997
         inSlope: 0
         outSlope: 0
         tangentMode: 136
