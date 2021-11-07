@@ -46,7 +46,7 @@ public class PlayerInteractController : MonoBehaviour
         
             if (TimeToWait < TimeWaited)
             {
-                options.Credits();                
+                SceneManager.LoadScene(5); 
             }
         }
 
